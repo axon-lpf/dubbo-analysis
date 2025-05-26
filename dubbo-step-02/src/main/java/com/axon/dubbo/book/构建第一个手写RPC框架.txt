@@ -1,0 +1,209 @@
+好的，以下是你要写的《手写Dubbo渐进式源码》**第二章：《构建第一个手写RPC框架》**的**详细内容结构与编写建议**。本章旨在从零开始，用最少的依赖，手写出一个简易的RPC通信框架，为后续服务注册、代理、序列化等功能打下代码基础。
+
+---
+
+## ✅ 第二章：构建第一个手写RPC框架
+
+> 💡 目标：使用 Socket 编程和 Java 反射机制，实现最简 RPC 通信框架，具备客户端调用、服务端接收与处理的完整链路。
+
+---
+
+### **2.1 章节导读：我们要构建什么？**
+
+* 本章目标：用最简洁的方式构建一个“能跑”的RPC系统
+* 不依赖Spring、不引入注册中心
+* 完成一次完整的远程方法调用流程（Consumer 调用 Provider）
+
+---
+
+### **2.2 项目结构设计**
+
+```
+handwritten-rpc/
+├── api/                    // 公共接口模块
+│   └── HelloService.java
+├── provider/               // 服务提供方
+│   └── HelloServiceImpl.java
+│   └── RpcServer.java
+├── consumer/               // 服务消费方
+│   └── RpcClient.java
+│   └── RpcProxy.java
+└── common/                 // 通用协议、实体、工具类
+    └── RpcRequest.java
+    └── RpcResponse.java
+```
+
+---
+
+### **2.3 定义接口与实现类（api 和 provider）**
+
+```java
+// api/HelloService.java
+public interface HelloService {
+    String sayHello(String name);
+}
+```
+
+```java
+// provider/HelloServiceImpl.java
+public class HelloServiceImpl implements HelloService {
+    public String sayHello(String name) {
+        return "你好，" + name + "！";
+    }
+}
+```
+
+---
+
+### **2.4 定义请求与响应模型（common）**
+
+```java
+// common/RpcRequest.java
+import java.io.Serializable;
+
+public class RpcRequest implements Serializable {
+    private String className;
+    private String methodName;
+    private Class<?>[] parameterTypes;
+    private Object[] parameters;
+    // 省略getter/setter
+}
+```
+
+```java
+// common/RpcResponse.java
+import java.io.Serializable;
+
+public class RpcResponse implements Serializable {
+    private Object result;
+    private Exception exception;
+    // 省略getter/setter
+}
+```
+
+---
+
+### **2.5 服务端实现（provider）**
+
+```java
+// provider/RpcServer.java
+public class RpcServer {
+
+    public static void main(String[] args) throws Exception {
+        ServerSocket serverSocket = new ServerSocket(8080);
+        System.out.println("服务端启动，监听端口 8080");
+
+        while (true) {
+            Socket socket = serverSocket.accept();
+            new Thread(() -> {
+                try (ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
+                     ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream())) {
+
+                    RpcRequest request = (RpcRequest) input.readObject();
+
+                    // 简化服务注册：只支持 HelloServiceImpl
+                    HelloService service = new HelloServiceImpl();
+
+                    Method method = service.getClass().getMethod(
+                            request.getMethodName(), request.getParameterTypes());
+                    Object result = method.invoke(service, request.getParameters());
+
+                    RpcResponse response = new RpcResponse();
+                    response.setResult(result);
+                    output.writeObject(response);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+    }
+}
+```
+
+---
+
+### **2.6 客户端实现（consumer）**
+
+#### 2.6.1 动态代理生成服务
+
+```java
+// consumer/RpcProxy.java
+public class RpcProxy {
+    public static <T> T getProxy(Class<T> interfaceClass) {
+        return (T) Proxy.newProxyInstance(interfaceClass.getClassLoader(), new Class[]{interfaceClass},
+                (proxy, method, args) -> {
+                    RpcRequest request = new RpcRequest();
+                    request.setClassName(interfaceClass.getName());
+                    request.setMethodName(method.getName());
+                    request.setParameterTypes(method.getParameterTypes());
+                    request.setParameters(args);
+
+                    try (Socket socket = new Socket("localhost", 8080);
+                         ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
+                         ObjectInputStream input = new ObjectInputStream(socket.getInputStream())) {
+
+                        output.writeObject(request);
+                        RpcResponse response = (RpcResponse) input.readObject();
+
+                        if (response.getException() != null) {
+                            throw response.getException();
+                        }
+
+                        return response.getResult();
+                    }
+                });
+    }
+}
+```
+
+#### 2.6.2 客户端调用服务
+
+```java
+// consumer/RpcClient.java
+public class RpcClient {
+    public static void main(String[] args) {
+        HelloService service = RpcProxy.getProxy(HelloService.class);
+        String result = service.sayHello("小傅哥");
+        System.out.println("调用结果：" + result);
+    }
+}
+```
+
+---
+
+### **2.7 项目运行与调试**
+
+1. 启动 `RpcServer.java`
+2. 启动 `RpcClient.java`
+3. 控制台输出：
+
+   ```
+   服务端启动，监听端口 8080
+   调用结果：你好，大飞哥！
+   ```
+
+---
+
+### **2.8 小结与延伸**
+
+* 完成了一个简易RPC的调用流程：
+
+  * 客户端 → 代理 → 请求发送
+  * 服务端 → 接收请求 → 反射调用 → 返回结果
+
+* 存在的问题：
+
+  * 没有服务注册机制
+  * 类名是字符串，缺乏灵活性
+  * 网络通信未加断言和容错
+  * 没有序列化扩展（只支持Java序列化）
+
+---
+
+### **2.9 思考题**
+
+* 如何用 Netty 替代 Socket 实现异步通信？
+* 如果多个服务接口共用同一端口，如何路由调用？
+* 如何支持参数为复杂对象（非基本类型）？
+
+---
