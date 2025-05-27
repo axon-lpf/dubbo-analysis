@@ -77,9 +77,7 @@ public class RpcNettyClient {
             // 获取响应后关闭连接
             connectFuture.channel().close();
             return response;
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (TimeoutException e) {
+        } catch (ExecutionException | TimeoutException e) {
             throw new RuntimeException(e);
         } finally {
             group.shutdownGracefully();
