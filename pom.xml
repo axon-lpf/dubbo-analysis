@@ -13,7 +13,6 @@
         <module>dubbo-step-01</module>
         <module>dubbo-step-02</module>
         <module>dubbo-step-03</module>
-        <module>dubbo-step-04</module>
     </modules>
 
     <properties>
