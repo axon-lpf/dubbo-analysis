@@ -9,6 +9,16 @@
     <file url="file://$PROJECT_DIR$/dubbo-step-02/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-step-03/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-step-03/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/dubbo-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-step-04/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

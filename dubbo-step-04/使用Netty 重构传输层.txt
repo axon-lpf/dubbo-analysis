@@ -1,0 +1,293 @@
+好的，我们继续按照你设定的编写规范，进入：
+
+---
+
+## 📘 第四章：网络通信优化：使用 Netty 重构传输层
+
+> 🎯 **目标**：使用 Netty 替代传统 Socket 通信，实现高性能、异步、事件驱动的网络通信模块，增强并发处理能力。
+
+---
+
+### 🧠 一、为什么要用 Netty？
+
+| Socket 通信存在的问题 | 优化方向（Netty） |
+| -------------- | ----------- |
+| 阻塞 IO，线程资源浪费   | 异步非阻塞 IO    |
+| 每个连接占一个线程      | 事件驱动、线程复用   |
+| 编解码需要手动处理      | 自带 Codec 支持 |
+| 零散的 IO 操作      | Buffer 池化   |
+
+---
+
+### 🔧 二、引入 Netty 的核心模块
+
+我们将构建如下结构：
+
+```
+- api
+  - HelloService.java
+  - RpcRequest.java
+  - RpcResponse.java
+- provider-netty
+  - RpcNettyServer.java
+  - NettyServerHandler.java
+  - HelloServiceImpl.java
+- client-netty
+  - RpcNettyClient.java
+  - NettyClientHandler.java
+  - RpcInvocationHandler.java
+  - ClientMain.java
+```
+
+---
+
+### 🛠️ 三、服务端基于 Netty 实现
+
+#### 1. 添加依赖（Maven）：
+
+```xml
+<dependency>
+  <groupId>io.netty</groupId>
+  <artifactId>netty-all</artifactId>
+  <version>4.1.100.Final</version>
+</dependency>
+```
+
+---
+
+#### 2. 服务端启动类
+
+```java
+// provider-netty/RpcNettyServer.java
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.*;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.serialization.*;
+
+public class RpcNettyServer {
+
+    public static void main(String[] args) throws InterruptedException {
+        HelloService helloService = new HelloServiceImpl();
+
+        EventLoopGroup boss = new NioEventLoopGroup();
+        EventLoopGroup worker = new NioEventLoopGroup();
+
+        try {
+            ServerBootstrap bootstrap = new ServerBootstrap();
+            bootstrap.group(boss, worker)
+                    .channel(NioServerSocketChannel.class)
+                    .childHandler(new ChannelInitializer<SocketChannel>() {
+                        protected void initChannel(SocketChannel ch) {
+                            ChannelPipeline p = ch.pipeline();
+                            p.addLast(new ObjectDecoder(1024 * 1024, ClassResolvers.cacheDisabled(null)));
+                            p.addLast(new ObjectEncoder());
+                            p.addLast(new NettyServerHandler(helloService));
+                        }
+                    });
+
+            ChannelFuture future = bootstrap.bind(8080).sync();
+            System.out.println("Netty RPC Server 启动成功，端口 8080");
+            future.channel().closeFuture().sync();
+        } finally {
+            boss.shutdownGracefully();
+            worker.shutdownGracefully();
+        }
+    }
+}
+```
+
+---
+
+#### 3. 服务端业务处理 Handler
+
+```java
+// provider-netty/NettyServerHandler.java
+import api.*;
+
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+
+import java.lang.reflect.Method;
+
+public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+
+    private final HelloService service;
+
+    public NettyServerHandler(HelloService service) {
+        this.service = service;
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        RpcRequest request = (RpcRequest) msg;
+        RpcResponse response = new RpcResponse();
+
+        try {
+            Method method = service.getClass().getMethod(request.getMethodName(), request.getParameterTypes());
+            Object result = method.invoke(service, request.getParameters());
+            response.setResult(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setResult("执行异常: " + e.getMessage());
+        }
+
+        ctx.writeAndFlush(response);
+    }
+}
+```
+
+---
+
+### 🧑‍💻 四、客户端基于 Netty 实现
+
+#### 1. 客户端发起连接
+
+```java
+// client-netty/RpcNettyClient.java
+import api.*;
+
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.*;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.serialization.*;
+
+public class RpcNettyClient {
+
+    private Object response;
+
+    public Object send(RpcRequest request, String host, int port) throws InterruptedException {
+        EventLoopGroup group = new NioEventLoopGroup();
+        try {
+            Bootstrap bootstrap = new Bootstrap();
+            RpcClientHandler handler = new RpcClientHandler();
+
+            bootstrap.group(group)
+                    .channel(NioSocketChannel.class)
+                    .handler(new ChannelInitializer<Channel>() {
+                        protected void initChannel(Channel ch) {
+                            ChannelPipeline pipeline = ch.pipeline();
+                            pipeline.addLast(new ObjectEncoder());
+                            pipeline.addLast(new ObjectDecoder(1024 * 1024, ClassResolvers.cacheDisabled(null)));
+                            pipeline.addLast(handler);
+                        }
+                    });
+
+            ChannelFuture future = bootstrap.connect(host, port).sync();
+            future.channel().writeAndFlush(request).sync();
+            future.channel().closeFuture().sync();
+
+            return handler.getResponse();
+        } finally {
+            group.shutdownGracefully();
+        }
+    }
+}
+```
+
+---
+
+#### 2. 客户端处理响应
+
+```java
+// client-netty/NettyClientHandler.java
+import api.RpcResponse;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+
+public class RpcClientHandler extends ChannelInboundHandlerAdapter {
+
+    private Object response;
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
+        RpcResponse rpcResponse = (RpcResponse) msg;
+        this.response = rpcResponse.getResult();
+    }
+
+    public Object getResponse() {
+        return response;
+    }
+}
+```
+
+---
+
+#### 3. 客户端代理调用改造
+
+```java
+// client-netty/RpcInvocationHandler.java
+import api.*;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+public class RpcInvocationHandler implements InvocationHandler {
+
+    private final String host;
+    private final int port;
+
+    public RpcInvocationHandler(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        RpcRequest request = new RpcRequest();
+        request.setClassName(method.getDeclaringClass().getName());
+        request.setMethodName(method.getName());
+        request.setParameterTypes(method.getParameterTypes());
+        request.setParameters(args);
+
+        RpcNettyClient client = new RpcNettyClient();
+        return client.send(request, host, port);
+    }
+}
+```
+
+---
+
+#### 4. 启动客户端
+
+```java
+// client-netty/ClientMain.java
+import api.HelloService;
+
+import java.lang.reflect.Proxy;
+
+public class ClientMain {
+    public static void main(String[] args) {
+        HelloService proxy = (HelloService) Proxy.newProxyInstance(
+                HelloService.class.getClassLoader(),
+                new Class<?>[]{HelloService.class},
+                new RpcInvocationHandler("localhost", 8080)
+        );
+
+        String res = proxy.sayHello("Netty");
+        System.out.println("客户端收到结果：" + res);
+    }
+}
+```
+
+---
+
+### ✅ 小结
+
+| 优化目标                | 状态                               |
+| ------------------- | -------------------------------- |
+| 替代阻塞 IO 的 Socket 模型 | ✅ 使用 Netty 实现异步网络通信              |
+| 提高并发性能与可扩展性         | ✅ NIO + 事件驱动模型                   |
+| 解耦编解码逻辑             | ✅ 使用 ObjectEncoder/ObjectDecoder |
+
+---
+
+### 🪜 下一章预告
+
+📘 **第五章：构建可扩展的协议设计与序列化机制**
+
+> Netty 目前使用 Java 原生序列化，效率低、安全性差。下一章我们将引入可插拔的序列化方案（JDK/Hessian/JSON 等），并设计协议魔数、长度标识等通信协议头部结构。
+
+是否继续进入第五章？我可以立即开始。
