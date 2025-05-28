@@ -18,6 +18,7 @@
         <module>dubbo-step-06</module>
         <module>dubbo-step-07</module>
         <module>dubbo-step-08</module>
+        <module>dubbo-step-09</module>
     </modules>
 
     <properties>
