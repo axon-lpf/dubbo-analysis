@@ -1,13 +1,24 @@
-
 package com.axon.dubbo.consumer;
 
-import com.axon.dubbo.api.HelloService;
-import com.axon.dubbo.transport.RpcFramework;
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 
 public class ConsumerClient {
     public static void main(String[] args) throws Exception {
-        HelloService service = RpcFramework.refer(HelloService.class, "127.0.0.1", 8080);
-        String result = service.sayHello("大飞哥");
-        System.out.println("调用结果: " + result);
+        Socket socket = new Socket("localhost", 12345);
+
+        try (ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+             ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
+            // 发送方法名和参数
+            out.writeObject("sayHello");
+            out.writeObject("大飞哥");
+            out.flush();
+
+            // 接收并输出结果
+            String result = (String) in.readObject();
+            System.out.println("收到服务端返回：" + result);
+        }
     }
 }
