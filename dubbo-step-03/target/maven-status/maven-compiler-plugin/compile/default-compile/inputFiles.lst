@@ -1,0 +1,10 @@
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\common\serialize\Serialization.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\remoting\transport\socket\ObjectClient.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\rpc\proxy\jdk\InvokerInvocationHandler.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\remoting\transport\socket\Request.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\remoting\transport\socket\ObjectServer.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\rpc\proxy\jdk\JdkProxyFactory.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\remoting\transport\socket\Response.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\common\serialize\java\JavaSerialization.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\rpc\proxy\ProxyFactory.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-03\src\main\java\com\axon\dubbo\rpc\RpcInvocation.java

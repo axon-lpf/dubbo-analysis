@@ -1,0 +1,4 @@
+java=com.axon.dubbo.common.serialize.java.JavaSerialization
+hessian2=com.axon.dubbo.common.serialize.hessian2.Hessian2Serialization
+fastjson=com.axon.dubbo.common.serialize.fastjson.FastJsonSerialization
+kryo=com.axon.dubbo.common.serialize.kryo.KryoSerialization

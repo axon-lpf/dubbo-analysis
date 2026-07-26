@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.axon.dubbo.demo.ApiTest" time="78.379" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="D:\Java\jdk-1.8.0\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Rainb\AppData\Local\Temp\surefire6364077487833608328\surefirebooter-20260709152811335_3.jar C:\Users\Rainb\AppData\Local\Temp\surefire6364077487833608328 2026-07-09T15-28-10_526-jvmRun1 surefire-20260709152811335_1tmp surefire_0-20260709152811335_2tmp"/>
+    <property name="surefire.test.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Rainb"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="D:\Java\jdk-1.8.0\jre"/>
+    <property name="basedir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rainb\AppData\Local\Temp\surefire6364077487833608328\surefirebooter-20260709152811335_3.jar"/>
+    <property name="sun.boot.class.path" value="D:\Java\jdk-1.8.0\jre\lib\resources.jar;D:\Java\jdk-1.8.0\jre\lib\rt.jar;D:\Java\jdk-1.8.0\jre\lib\jsse.jar;D:\Java\jdk-1.8.0\jre\lib\jce.jar;D:\Java\jdk-1.8.0\jre\lib\charsets.jar;D:\Java\jdk-1.8.0\jre\lib\jfr.jar;D:\Java\jdk-1.8.0\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_391-b13"/>
+    <property name="user.name" value="Rainb"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="D:\Java\jdk-1.8.0\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Rainb\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rainb\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_391"/>
+    <property name="user.dir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-12"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Java\jdk-1.8.0\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\platform-tools_r34.0.4-windows\platform-tools;D:\Java\jdk-1.8.0\bin;D:\Git\cmd;D:\Git\bin;D:\Java\apache-maven-3.9.5\bin;C:\Program Files\nodejs\;D:\ngrok;C:\Program Files\Tailscale\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\WireGuard\;C:\Users\Rainb\.codemaker\bin;C:\Users\Rainb\.local\bin;C:\Users\Rainb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\bin;C:\Users\Rainb\AppData\Roaming\npm;D:\Microsoft VS Code\bin;C:\Users\Rainb\AppData\Local\Microsoft\WinGet\Links;C:\Users\Rainb\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.391-b13"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="D:\Java\jdk-1.8.0\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testFailsafeCluster" classname="com.axon.dubbo.demo.ApiTest" time="0.009">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 0
+========== Failsafe ==========
+[FailsafeClusterInvoker] 无 Provider，返回空结果
+返回结果: null (异常: false)
+[测试通过] Failsafe ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testFailfastCluster" classname="com.axon.dubbo.demo.ApiTest" time="21.11">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 3
+========== Failfast ==========
+集群: FailfastClusterInvoker
+[FailfastClusterInvoker] 调用 → 10.0.0.3:20883
+[DubboInvoker] 发起远程调用: Request{id=1, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.3:20883
+[测试通过] Failfast ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testBroadcastCluster" classname="com.axon.dubbo.demo.ApiTest" time="21.06">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 3
+========== Broadcast ==========
+集群: BroadcastClusterInvoker
+[BroadcastClusterInvoker] 广播调用 3 个 Provider
+[BroadcastClusterInvoker]  [1/3] → 10.0.0.1:20881
+[DubboInvoker] 发起远程调用: Request{id=2, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.1:20881
+[测试通过] Broadcast ✓
+]]></system-out>
+    <system-err><![CDATA[[BroadcastClusterInvoker] 广播调用失败: 广播失败: 10.0.0.1:20881
+]]></system-err>
+  </testcase>
+  <testcase name="testFailoverCluster" classname="com.axon.dubbo.demo.ApiTest" time="0.001">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 3
+========== Failover ==========
+集群: FailoverClusterInvoker | 可用: true
+[测试通过] Failover ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testForkingCluster" classname="com.axon.dubbo.demo.ApiTest" time="15.065">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 3
+========== Forking ==========
+集群: ForkingClusterInvoker
+[ForkingClusterInvoker] 并行调用 3 个 Provider
+[ForkingClusterInvoker] 并发#1 → 10.0.0.1:20881
+[DubboInvoker] 发起远程调用: Request{id=3, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.1:20881
+[ForkingClusterInvoker] 并发#2 → 10.0.0.2:20882
+[ForkingClusterInvoker] 并发#3 → 10.0.0.3:20883
+[DubboInvoker] 发起远程调用: Request{id=4, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.2:20882
+[DubboInvoker] 发起远程调用: Request{id=5, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.3:20883
+[测试通过] Forking ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testFailbackCluster" classname="com.axon.dubbo.demo.ApiTest" time="0.007">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 0
+========== Failback ==========
+返回(空Provider): null
+[测试通过] Failback ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testAvailableCluster" classname="com.axon.dubbo.demo.ApiTest" time="21.055">
+    <system-out><![CDATA[[StaticDirectory] 创建静态目录: IUserService | Provider 数量: 3
+========== Available ==========
+集群: AvailableClusterInvoker
+[AvailableClusterInvoker] 找到可用 Provider → 10.0.0.1:20881
+[DubboInvoker] 发起远程调用: Request{id=6, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1]} → 10.0.0.1:20881
+[测试通过] Available ✓
+]]></system-out>
+  </testcase>
+</testsuite>

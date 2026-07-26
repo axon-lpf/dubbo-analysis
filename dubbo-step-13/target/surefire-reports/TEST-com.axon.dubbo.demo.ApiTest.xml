@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.axon.dubbo.demo.ApiTest" time="0.103" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="D:\Java\jdk-1.8.0\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Rainb\AppData\Local\Temp\surefire693637247907660397\surefirebooter-20260709153424216_3.jar C:\Users\Rainb\AppData\Local\Temp\surefire693637247907660397 2026-07-09T15-34-23_531-jvmRun1 surefire-20260709153424216_1tmp surefire_0-20260709153424216_2tmp"/>
+    <property name="surefire.test.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Rainb"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="D:\Java\jdk-1.8.0\jre"/>
+    <property name="basedir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rainb\AppData\Local\Temp\surefire693637247907660397\surefirebooter-20260709153424216_3.jar"/>
+    <property name="sun.boot.class.path" value="D:\Java\jdk-1.8.0\jre\lib\resources.jar;D:\Java\jdk-1.8.0\jre\lib\rt.jar;D:\Java\jdk-1.8.0\jre\lib\jsse.jar;D:\Java\jdk-1.8.0\jre\lib\jce.jar;D:\Java\jdk-1.8.0\jre\lib\charsets.jar;D:\Java\jdk-1.8.0\jre\lib\jfr.jar;D:\Java\jdk-1.8.0\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_391-b13"/>
+    <property name="user.name" value="Rainb"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="D:\Java\jdk-1.8.0\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Rainb\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rainb\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_391"/>
+    <property name="user.dir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-13"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Java\jdk-1.8.0\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\platform-tools_r34.0.4-windows\platform-tools;D:\Java\jdk-1.8.0\bin;D:\Git\cmd;D:\Git\bin;D:\Java\apache-maven-3.9.5\bin;C:\Program Files\nodejs\;D:\ngrok;C:\Program Files\Tailscale\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\WireGuard\;C:\Users\Rainb\.codemaker\bin;C:\Users\Rainb\.local\bin;C:\Users\Rainb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\bin;C:\Users\Rainb\AppData\Roaming\npm;D:\Microsoft VS Code\bin;C:\Users\Rainb\AppData\Local\Microsoft\WinGet\Links;C:\Users\Rainb\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.391-b13"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="D:\Java\jdk-1.8.0\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testSupportedExtensions" classname="com.axon.dubbo.demo.ApiTest" time="0.025">
+    <system-out><![CDATA[========== 支持的扩展名 ==========
+  - benz
+  - bmw
+  - f1
+  - redflag
+[测试通过] 扩展名列表 ✓ (共 4 个)
+]]></system-out>
+  </testcase>
+  <testcase name="testWrapperAOP" classname="com.axon.dubbo.demo.ApiTest" time="0.001">
+    <system-out><![CDATA[========== Wrapper AOP ==========
+[CarWrapper - 前置] 准备驾驶 Benz
+[CarWrapper - 后置] 驾驶结束
+drive() 返回: [Wrapped] Benz is driving smoothly...
+[CarWrapper - 前置] 准备驾驶 Benz
+[CarWrapper - 后置] 驾驶结束
+[测试通过] Wrapper AOP ✓ (CarWrapper 自动包装了 BenzCar)
+]]></system-out>
+  </testcase>
+  <testcase name="testGetExtensionByName" classname="com.axon.dubbo.demo.ApiTest" time="0.001">
+    <system-out><![CDATA[========== 按名称获取扩展 ==========
+[CarWrapper - 前置] 准备驾驶 Benz
+[CarWrapper - 后置] 驾驶结束
+benz: Benz → [Wrapped] Benz is driving smoothly...
+[CarWrapper - 前置] 准备驾驶 BMW
+[CarWrapper - 后置] 驾驶结束
+bmw: BMW → [Wrapped] BMW is driving fast...
+[CarWrapper - 前置] 准备驾驶 RedFlag
+[CarWrapper - 后置] 驾驶结束
+redflag: RedFlag → [Wrapped] RedFlag is driving with honor...
+[测试通过] 按名称获取扩展 ✓ (缓存验证通过)
+]]></system-out>
+  </testcase>
+  <testcase name="testActivate" classname="com.axon.dubbo.demo.ApiTest" time="0.0">
+    <system-out><![CDATA[========== @Activate 自动激活 ==========
+自动激活的扩展数: 1
+[CarWrapper - 前置] 准备驾驶 Filter1
+[CarWrapper - 后置] 驾驶结束
+  → Filter1: [Wrapped] CarFilter1 applied
+[测试通过] @Activate ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testSPIAnnotationRequired" classname="com.axon.dubbo.demo.ApiTest" time="0.001"/>
+  <testcase name="testDefaultExtension" classname="com.axon.dubbo.demo.ApiTest" time="0.001">
+    <system-out><![CDATA[========== 默认扩展 ==========
+默认实现: Benz
+[测试通过] 默认扩展 ✓
+]]></system-out>
+  </testcase>
+  <testcase name="testUnknownExtension" classname="com.axon.dubbo.demo.ApiTest" time="0.0"/>
+</testsuite>

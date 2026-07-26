@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.axon.dubbo.demo.ApiTest" time="0.51" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05\target\classes;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="D:\Java\jdk-1.8.0\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Rainb\AppData\Local\Temp\surefire7669449541837246723\surefirebooter-20260709140726442_3.jar C:\Users\Rainb\AppData\Local\Temp\surefire7669449541837246723 2026-07-09T14-07-22_833-jvmRun1 surefire-20260709140726442_1tmp surefire_0-20260709140726442_2tmp"/>
+    <property name="surefire.test.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05\target\classes;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Rainb"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="D:\Java\jdk-1.8.0\jre"/>
+    <property name="basedir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rainb\AppData\Local\Temp\surefire7669449541837246723\surefirebooter-20260709140726442_3.jar"/>
+    <property name="sun.boot.class.path" value="D:\Java\jdk-1.8.0\jre\lib\resources.jar;D:\Java\jdk-1.8.0\jre\lib\rt.jar;D:\Java\jdk-1.8.0\jre\lib\jsse.jar;D:\Java\jdk-1.8.0\jre\lib\jce.jar;D:\Java\jdk-1.8.0\jre\lib\charsets.jar;D:\Java\jdk-1.8.0\jre\lib\jfr.jar;D:\Java\jdk-1.8.0\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_391-b13"/>
+    <property name="user.name" value="Rainb"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="D:\Java\jdk-1.8.0\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Rainb\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rainb\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_391"/>
+    <property name="user.dir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-05"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Java\jdk-1.8.0\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\platform-tools_r34.0.4-windows\platform-tools;D:\Java\jdk-1.8.0\bin;D:\Git\cmd;D:\Git\bin;D:\Java\apache-maven-3.9.5\bin;C:\Program Files\nodejs\;D:\ngrok;C:\Program Files\Tailscale\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\WireGuard\;C:\Users\Rainb\.codemaker\bin;C:\Users\Rainb\.local\bin;C:\Users\Rainb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\bin;C:\Users\Rainb\AppData\Roaming\npm;D:\Microsoft VS Code\bin;C:\Users\Rainb\AppData\Local\Microsoft\WinGet\Links;C:\Users\Rainb\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.391-b13"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="D:\Java\jdk-1.8.0\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testDubboCodec" classname="com.axon.dubbo.demo.ApiTest" time="0.06">
+    <system-out><![CDATA[========== DubboCodec 测试 ==========
+原始请求: Request{id=1, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1001]}
+编码字节数: 446
+协议头(16B) + 数据体(430B)
+Magic:  0xDABB
+Flag:   0x00 (请求=是)
+Req ID: 1
+解码请求: Request{id=1, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1001]}
+解码响应: Response{id=1, ok, res=Hello!}
+[测试通过] DubboCodec 编解码验证成功！
+]]></system-out>
+  </testcase>
+  <testcase name="testProtocolExportRefer" classname="com.axon.dubbo.demo.ApiTest" time="0.367">
+    <system-out><![CDATA[[DubboProtocol] 导出服务: com.axon.dubbo.demo.IUserService:1.0.0 | URL: dubbo://127.0.0.1:20881/com.axon.dubbo.demo.IUserService?version=1.0.0
+[测试] 服务已导出: dubbo://127.0.0.1:20881/com.axon.dubbo.demo.IUserService?version=1.0.0
+[DubboProtocol] 服务端启动成功，端口: 20881
+[DubboProtocol] 引用服务: com.axon.dubbo.demo.IUserService | URL: dubbo://127.0.0.1:20881/com.axon.dubbo.demo.IUserService?version=1.0.0
+========== Protocol export/refer 测试 ==========
+[InvokerInvocationHandler] 拦截: getUser[1001]
+[DubboInvoker] 发起远程调用: Request{id=1, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1001]} → 127.0.0.1:20881
+[DubboProtocol] 收到请求: Request{id=1, svc=com.axon.dubbo.demo.IUserService, m=getUser, args=[1001]}
+[UserServiceImpl] getUser(1001)
+[测试] getUser: User{id=1001, name='User_1001', age=25, email='user1001@example.com'}
+[InvokerInvocationHandler] 拦截: getUserName[2002]
+[DubboInvoker] 发起远程调用: Request{id=2, svc=com.axon.dubbo.demo.IUserService, m=getUserName, args=[2002]} → 127.0.0.1:20881
+[DubboProtocol] 收到请求: Request{id=2, svc=com.axon.dubbo.demo.IUserService, m=getUserName, args=[2002]}
+[UserServiceImpl] getUserName(2002)
+[测试] getUserName: UserName_2002
+[InvokerInvocationHandler] 拦截: saveUser[User{id=null, name='王五', age=35, email='wangwu@test.com'}]
+[DubboInvoker] 发起远程调用: Request{id=3, svc=com.axon.dubbo.demo.IUserService, m=saveUser, args=[User{id=null, name='王五', age=35, email='wangwu@test.com'}]} → 127.0.0.1:20881
+[DubboProtocol] 收到请求: Request{id=3, svc=com.axon.dubbo.demo.IUserService, m=saveUser, args=[User{id=null, name='王五', age=35, email='wangwu@test.com'}]}
+[UserServiceImpl] saveUser(User{id=null, name='王五', age=35, email='wangwu@test.com'})
+[测试] saveUser: User{id=1783577250953, name='王五', age=35, email='wangwu@test.com'}
+[测试通过] Protocol export/refer 端到端验证成功！
+[DubboExporter] 取消导出: com.axon.dubbo.demo.IUserService:1.0.0
+]]></system-out>
+  </testcase>
+  <testcase name="testCodecMagicCheck" classname="com.axon.dubbo.demo.ApiTest" time="0.0"/>
+  <testcase name="testLocalInvokerProxy" classname="com.axon.dubbo.demo.ApiTest" time="0.001">
+    <system-out><![CDATA[[InvokerInvocationHandler] 拦截: getUser[1]
+[UserServiceImpl] getUser(1)
+[测试通过] 本地 Invoker + 代理验证成功: User{id=1, name='User_1', age=25, email='user1@example.com'}
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,5 @@
+# Created at 2026-07-09T15:16:41.140
+Boot Manifest-JAR contains absolute paths in classpath 'D:\workspace\source-analysis\dubbo-analysis\dubbo-step-11\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

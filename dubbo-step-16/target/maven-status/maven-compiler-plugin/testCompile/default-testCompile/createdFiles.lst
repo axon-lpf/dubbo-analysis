@@ -1,0 +1,10 @@
+com\axon\dubbo\demo\car\Car.class
+com\axon\dubbo\demo\car\CarFilter1.class
+com\axon\dubbo\demo\car\CarWrapper.class
+com\axon\dubbo\demo\car\RedFlagCar.class
+com\axon\dubbo\demo\car\BenzCar.class
+com\axon\dubbo\demo\ApiTest.class
+com\axon\dubbo\demo\IUserService.class
+com\axon\dubbo\demo\car\BmwCar.class
+com\axon\dubbo\demo\User.class
+com\axon\dubbo\demo\UserServiceImpl.class

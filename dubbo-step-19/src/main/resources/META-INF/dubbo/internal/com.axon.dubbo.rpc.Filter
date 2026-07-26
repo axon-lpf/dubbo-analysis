@@ -1,0 +1,4 @@
+accesslog=com.axon.dubbo.rpc.filter.AccessLogFilter
+exception=com.axon.dubbo.rpc.filter.ExceptionFilter
+timecost=com.axon.dubbo.rpc.filter.TimeCostFilter
+monitor=com.axon.dubbo.rpc.filter.MonitorFilter

@@ -1,0 +1,6 @@
+# SPI Configuration for Car
+benz=com.axon.dubbo.demo.car.BenzCar
+bmw=com.axon.dubbo.demo.car.BmwCar
+redflag=com.axon.dubbo.demo.car.RedFlagCar
+f1=com.axon.dubbo.demo.car.CarFilter1
+wrapper=com.axon.dubbo.demo.car.CarWrapper

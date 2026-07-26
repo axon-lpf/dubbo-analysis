@@ -1,0 +1,6 @@
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\remoting\transport\socket\ObjectClient.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\common\serialize\java\JavaSerialization.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\common\serialize\Serialization.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\remoting\transport\socket\Request.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\remoting\transport\socket\Response.java
+D:\workspace\source-analysis\dubbo-analysis\dubbo-step-02\src\main\java\com\axon\dubbo\remoting\transport\socket\ObjectServer.java

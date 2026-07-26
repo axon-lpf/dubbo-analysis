@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.axon.dubbo.demo.ApiTest" time="3.704" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-all\4.1.100.Final\netty-all-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.100.Final\netty-buffer-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.100.Final\netty-codec-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-dns\4.1.100.Final\netty-codec-dns-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-haproxy\4.1.100.Final\netty-codec-haproxy-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-http\4.1.100.Final\netty-codec-http-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-http2\4.1.100.Final\netty-codec-http2-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-memcache\4.1.100.Final\netty-codec-memcache-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-mqtt\4.1.100.Final\netty-codec-mqtt-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-redis\4.1.100.Final\netty-codec-redis-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-smtp\4.1.100.Final\netty-codec-smtp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-socks\4.1.100.Final\netty-codec-socks-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-stomp\4.1.100.Final\netty-codec-stomp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-xml\4.1.100.Final\netty-codec-xml-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.100.Final\netty-common-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.100.Final\netty-transport-native-unix-common-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler-proxy\4.1.100.Final\netty-handler-proxy-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler-ssl-ocsp\4.1.100.Final\netty-handler-ssl-ocsp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.100.Final\netty-resolver-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns\4.1.100.Final\netty-resolver-dns-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.100.Final\netty-transport-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-rxtx\4.1.100.Final\netty-transport-rxtx-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-sctp\4.1.100.Final\netty-transport-sctp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-udt\4.1.100.Final\netty-transport-udt-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.100.Final\netty-transport-classes-epoll-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.100.Final\netty-transport-classes-kqueue-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.100.Final\netty-resolver-dns-classes-macos-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final-linux-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final-linux-aarch_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final-osx-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final-osx-aarch_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.100.Final\netty-resolver-dns-native-macos-4.1.100.Final-osx-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.100.Final\netty-resolver-dns-native-macos-4.1.100.Final-osx-aarch_64.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="D:\Java\jdk-1.8.0\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Rainb\AppData\Local\Temp\surefire7082776888535775426\surefirebooter-20260709155318455_3.jar C:\Users\Rainb\AppData\Local\Temp\surefire7082776888535775426 2026-07-09T15-53-17_797-jvmRun1 surefire-20260709155318455_1tmp surefire_0-20260709155318455_2tmp"/>
+    <property name="surefire.test.class.path" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16\target\test-classes;D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16\target\classes;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-framework\5.1.0\curator-framework-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-client\5.1.0\curator-client-5.1.0.jar;C:\Users\Rainb\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar;C:\Users\Rainb\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Rainb\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Rainb\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Rainb\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;C:\Users\Rainb\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\Rainb\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rainb\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\Rainb\.m2\repository\org\apache\curator\curator-recipes\5.1.0\curator-recipes-5.1.0.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\Rainb\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rainb\.m2\repository\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;C:\Users\Rainb\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-all\4.1.100.Final\netty-all-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-buffer\4.1.100.Final\netty-buffer-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec\4.1.100.Final\netty-codec-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-dns\4.1.100.Final\netty-codec-dns-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-haproxy\4.1.100.Final\netty-codec-haproxy-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-http\4.1.100.Final\netty-codec-http-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-http2\4.1.100.Final\netty-codec-http2-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-memcache\4.1.100.Final\netty-codec-memcache-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-mqtt\4.1.100.Final\netty-codec-mqtt-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-redis\4.1.100.Final\netty-codec-redis-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-smtp\4.1.100.Final\netty-codec-smtp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-socks\4.1.100.Final\netty-codec-socks-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-stomp\4.1.100.Final\netty-codec-stomp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-codec-xml\4.1.100.Final\netty-codec-xml-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-common\4.1.100.Final\netty-common-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.100.Final\netty-transport-native-unix-common-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler-proxy\4.1.100.Final\netty-handler-proxy-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-handler-ssl-ocsp\4.1.100.Final\netty-handler-ssl-ocsp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver\4.1.100.Final\netty-resolver-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns\4.1.100.Final\netty-resolver-dns-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport\4.1.100.Final\netty-transport-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-rxtx\4.1.100.Final\netty-transport-rxtx-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-sctp\4.1.100.Final\netty-transport-sctp-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-udt\4.1.100.Final\netty-transport-udt-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.100.Final\netty-transport-classes-epoll-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.100.Final\netty-transport-classes-kqueue-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.100.Final\netty-resolver-dns-classes-macos-4.1.100.Final.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final-linux-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final-linux-aarch_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final-osx-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.100.Final\netty-transport-native-kqueue-4.1.100.Final-osx-aarch_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.100.Final\netty-resolver-dns-native-macos-4.1.100.Final-osx-x86_64.jar;C:\Users\Rainb\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.100.Final\netty-resolver-dns-native-macos-4.1.100.Final-osx-aarch_64.jar;C:\Users\Rainb\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rainb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Rainb"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="D:\Java\jdk-1.8.0\jre"/>
+    <property name="basedir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rainb\AppData\Local\Temp\surefire7082776888535775426\surefirebooter-20260709155318455_3.jar"/>
+    <property name="sun.boot.class.path" value="D:\Java\jdk-1.8.0\jre\lib\resources.jar;D:\Java\jdk-1.8.0\jre\lib\rt.jar;D:\Java\jdk-1.8.0\jre\lib\jsse.jar;D:\Java\jdk-1.8.0\jre\lib\jce.jar;D:\Java\jdk-1.8.0\jre\lib\charsets.jar;D:\Java\jdk-1.8.0\jre\lib\jfr.jar;D:\Java\jdk-1.8.0\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_391-b13"/>
+    <property name="user.name" value="Rainb"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="D:\Java\jdk-1.8.0\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Rainb\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rainb\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_391"/>
+    <property name="user.dir" value="D:\workspace\source-analysis\dubbo-analysis\dubbo-step-16"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Java\jdk-1.8.0\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\platform-tools_r34.0.4-windows\platform-tools;D:\Java\jdk-1.8.0\bin;D:\Git\cmd;D:\Git\bin;D:\Java\apache-maven-3.9.5\bin;C:\Program Files\nodejs\;D:\ngrok;C:\Program Files\Tailscale\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\WireGuard\;C:\Users\Rainb\.codemaker\bin;C:\Users\Rainb\.local\bin;C:\Users\Rainb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\bin;C:\Users\Rainb\AppData\Roaming\npm;D:\Microsoft VS Code\bin;C:\Users\Rainb\AppData\Local\Microsoft\WinGet\Links;C:\Users\Rainb\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.391-b13"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="D:\Java\jdk-1.8.0\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testBioNioTransparency" classname="com.axon.dubbo.demo.ApiTest" time="0.005">
+    <system-out><![CDATA[========== BIO→NIO 透明升级验证 ==========
+Step 14 (BIO) 客户端代码:
+  Protocol protocol = new DubboProtocol(registry);
+  Invoker<T> inv = protocol.refer(type, url);
+  T service = proxyFactory.getProxy(inv);
+  service.method();  // 底层: Socket BIO
+
+Step 16 (NIO) 客户端代码:
+  Protocol protocol = new DubboProtocol(registry);
+  Invoker<T> inv = protocol.refer(type, url);
+  T service = proxyFactory.getProxy(inv);
+  service.method();  // 底层: Netty NIO ← 仅此不同！
+
+[结论] 上层代码完全一致，Protocol/Proxy/Cluster/Filter 层零改动！
+[测试通过] 抽象层价值验证——传输层可插拔！
+]]></system-out>
+  </testcase>
+  <testcase name="testNettyRpcCall" classname="com.axon.dubbo.demo.ApiTest" time="2.766">
+    <system-out><![CDATA[[LocalRegistry] 本地注册中心已启动
+[AbstractRegistry] 注册服务: com.axon.dubbo.demo.IUserService:1.0.0 → 127.0.0.1:20921（当前共 1 个提供者）
+[DubboProtocol] 导出并注册(NIO): com.axon.dubbo.demo.IUserService:1.0.0 | dubbo://127.0.0.1:20921/com.axon.dubbo.demo.IUserService?version=1.0.0
+[AbstractRegistry] 添加订阅: com.axon.dubbo.demo.IUserService:1.0.0
+[AbstractRegistry] 查找服务: com.axon.dubbo.demo.IUserService:1.0.0 → 找到 1 个提供者
+[RegistryDirectory] 收到通知，Provider 数量: 1
+[RegistryDirectory]   → 127.0.0.1:20921 (com.axon.dubbo.demo.IUserService:1.0.0)
+[RegistryDirectory] 列表已更新，共 1 个 Invoker
+[RegistryDirectory] 已订阅: com.axon.dubbo.demo.IUserService:1.0.0
+[DubboProtocol] 引用服务(NIO): com.axon.dubbo.demo.IUserService:1.0.0 | Provider: 1
+========== Netty NIO RPC 调用 ==========
+[InvokerInvocationHandler] 拦截: getUser[1001]
+[FailoverClusterInvoker] 开始调用，候选 Provider 数: 1，最大重试: 2
+[FailoverClusterInvoker] 第1次尝试 → 127.0.0.1:20921
+[NettyInvoker] NIO 调用 → 127.0.0.1:20921 | getUser
+[NettyServer] NIO 服务端启动成功，端口: 20921
+[NettyClient] 连接成功: 127.0.0.1:20921
+[AccessLog] 收到调用: com.axon.dubbo.demo.IUserService.getUser | 参数: [1001]
+[UserServiceImpl] getUser(1001)
+[AccessLog] 调用完成: 耗时 1ms | 结果: 成功
+[FailoverClusterInvoker] 调用成功！
+[TimeCost] Consumer 端调用耗时: 1931ms
+[1] User_1001
+[InvokerInvocationHandler] 拦截: getUser[1002]
+[FailoverClusterInvoker] 开始调用，候选 Provider 数: 1，最大重试: 2
+[FailoverClusterInvoker] 第1次尝试 → 127.0.0.1:20921
+[NettyInvoker] NIO 调用 → 127.0.0.1:20921 | getUser
+[AccessLog] 收到调用: com.axon.dubbo.demo.IUserService.getUser | 参数: [1002]
+[UserServiceImpl] getUser(1002)
+[AccessLog] 调用完成: 耗时 1ms | 结果: 成功
+[FailoverClusterInvoker] 调用成功！
+[TimeCost] Consumer 端调用耗时: 1ms
+[2] User_1002
+[InvokerInvocationHandler] 拦截: getUser[1003]
+[FailoverClusterInvoker] 开始调用，候选 Provider 数: 1，最大重试: 2
+[FailoverClusterInvoker] 第1次尝试 → 127.0.0.1:20921
+[NettyInvoker] NIO 调用 → 127.0.0.1:20921 | getUser
+[AccessLog] 收到调用: com.axon.dubbo.demo.IUserService.getUser | 参数: [1003]
+[UserServiceImpl] getUser(1003)
+[AccessLog] 调用完成: 耗时 0ms | 结果: 成功
+[FailoverClusterInvoker] 调用成功！
+[TimeCost] Consumer 端调用耗时: 2ms
+[3] User_1003
+[测试通过] Netty NIO 端到端调用成功，3 次请求连接复用！
+[DubboExporter] 取消导出: com.axon.dubbo.demo.IUserService:1.0.0
+[AbstractRegistry] 取消注册: com.axon.dubbo.demo.IUserService:1.0.0 → 127.0.0.1:20921
+[RegistryDirectory] 收到通知，Provider 数量: 0
+[RegistryDirectory] 列表已更新，共 0 个 Invoker
+]]></system-out>
+    <system-err><![CDATA[log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+  </testcase>
+  <testcase name="testNettyWithFilterChain" classname="com.axon.dubbo.demo.ApiTest" time="0.886">
+    <system-out><![CDATA[[LocalRegistry] 本地注册中心已启动
+[NettyServer] NIO 服务端启动成功，端口: 20922
+[AbstractRegistry] 注册服务: com.axon.dubbo.demo.IUserService:1.0.0 → 127.0.0.1:20922（当前共 1 个提供者）
+[DubboProtocol] 导出并注册(NIO): com.axon.dubbo.demo.IUserService:1.0.0 | dubbo://127.0.0.1:20922/com.axon.dubbo.demo.IUserService?version=1.0.0
+[AbstractRegistry] 添加订阅: com.axon.dubbo.demo.IUserService:1.0.0
+[AbstractRegistry] 查找服务: com.axon.dubbo.demo.IUserService:1.0.0 → 找到 1 个提供者
+[RegistryDirectory] 收到通知，Provider 数量: 1
+[RegistryDirectory]   → 127.0.0.1:20922 (com.axon.dubbo.demo.IUserService:1.0.0)
+[RegistryDirectory] 列表已更新，共 1 个 Invoker
+[RegistryDirectory] 已订阅: com.axon.dubbo.demo.IUserService:1.0.0
+[DubboProtocol] 引用服务(NIO): com.axon.dubbo.demo.IUserService:1.0.0 | Provider: 1
+========== Netty + Filter 链 ==========
+[InvokerInvocationHandler] 拦截: getUser[9999]
+[FailoverClusterInvoker] 开始调用，候选 Provider 数: 1，最大重试: 2
+[FailoverClusterInvoker] 第1次尝试 → 127.0.0.1:20922
+[NettyInvoker] NIO 调用 → 127.0.0.1:20922 | getUser
+[NettyClient] 连接成功: 127.0.0.1:20922
+[AccessLog] 收到调用: com.axon.dubbo.demo.IUserService.getUser | 参数: [9999]
+[UserServiceImpl] getUser(9999)
+[AccessLog] 调用完成: 耗时 0ms | 结果: 成功
+[FailoverClusterInvoker] 调用成功！
+[TimeCost] Consumer 端调用耗时: 52ms
+[结果] User{id=9999, name='User_9999', age=25, email='user9999@example.com'}
+[测试通过] Filter 链在 Netty 下透明运行！
+[NettyServer] 已关闭
+[AbstractRegistry] 取消订阅: com.axon.dubbo.demo.IUserService:1.0.0
+[RegistryDirectory] 已取消订阅
+[AbstractRegistry] 取消注册: com.axon.dubbo.demo.IUserService:1.0.0 → 127.0.0.1:20922
+[DubboExporter] 取消导出: com.axon.dubbo.demo.IUserService:1.0.0
+[DubboProtocol] 已销毁
+]]></system-out>
+  </testcase>
+</testsuite>

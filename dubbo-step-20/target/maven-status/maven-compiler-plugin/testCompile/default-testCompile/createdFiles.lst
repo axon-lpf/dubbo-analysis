@@ -1,0 +1,4 @@
+com\axon\dubbo\demo\ApiTest.class
+com\axon\dubbo\demo\IUserService.class
+com\axon\dubbo\demo\User.class
+com\axon\dubbo\demo\UserServiceImpl.class

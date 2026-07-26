@@ -1,0 +1,6 @@
+com\axon\dubbo\remoting\transport\socket\Response.class
+com\axon\dubbo\common\serialize\Serialization.class
+com\axon\dubbo\remoting\transport\socket\ObjectClient.class
+com\axon\dubbo\remoting\transport\socket\Request.class
+com\axon\dubbo\remoting\transport\socket\ObjectServer.class
+com\axon\dubbo\common\serialize\java\JavaSerialization.class
